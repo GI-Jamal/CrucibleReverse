@@ -20,9 +20,3 @@ function displayString(reversedMessage) {
   document.getElementById("msg").textContent = reversedMessage;
   document.getElementById("alert").classList.remove("d-none");
 }
-
-// Swal.fire({
-//   backdrop: false,
-//   title: "Flip Flop",
-//   text: msg,
-// });
