@@ -213,7 +213,7 @@
             program which displays a user-entered string in reverse
           </h4>
         </div>
-        <div class="col pt-5">
+        <div class="col pt-5 border-bottom border-white border-2">
           <h4 class="lead my-3">
             Enter some text below, then press the button to see it reversed.
           </h4>
@@ -223,10 +223,9 @@
             placeholder="Enter a Message to reverse"
             id="message"
           />
-          <button class="btn btn-primary my-1" id="btnSubmit">
+          <button class="btn btn-primary my-1" id="btnSubmit" onclick="getValues()">
             Display Message
           </button>
-          <hr />
           <div class="alert alert-success mt-5 d-none" id="alert" role="alert">
             <h4 class="alert-heading">Your message has been reversed!</h4>
             <hr />
