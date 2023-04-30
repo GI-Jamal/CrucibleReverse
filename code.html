@@ -230,10 +230,32 @@ function displayString(reversedMessage) {
           </pre>
         </div>
         <div class="col-lg-4 col-12 mt-2">
-          <p>The code is structured in one function:</p>
+          <p>The code is structured in three functions:</p>
           <hr />
-          <h5>displaMessage</h5>
-          <p>print out the message</p>
+          <h5>getValues():</h5>
+          <p>
+            This function retrieves a string input from an HTML element with the
+            ID "message," reverses the order of the characters in the string
+            using the reverseString() function, and then displays the reversed
+            string in another HTML element with the ID "msg" using the
+            displayString() function.
+          </p>
+          <hr />
+          <h5>reverseString():</h5>
+          <p>
+            The reverseString() function takes a string parameter and returns a
+            string with the characters reversed by iterating through the string
+            in reverse and concatenating each character together to form the
+            reversed string.
+          </p>
+          <hr />
+          <h5>displayString():</h5>
+          <p>
+            This function takes a string parameter and displays
+            it in an HTML element with the ID "msg," and also removes a class
+            called "d-none" from an HTML element with the ID "alert" to make it
+            visible.
+          </p>
           <hr />
         </div>
       </div>

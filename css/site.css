@@ -191,7 +191,7 @@ footer {
 }
 
 .appLogo {
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .mainMargins {
@@ -204,6 +204,22 @@ footer {
 }
 
 /* Media Queries*/
+
+@media (max-height: 415px) and (orientation: landscape) and (min-width: 768px) {
+  .appLogo {
+    max-width: 250px;
+  }
+  #logoCol {
+    align-items: start;
+    padding-top: 3rem;
+    height: 100%;
+    padding-right: 1rem !important;
+  }
+
+  h4 {
+    font-size: 1rem !important;
+  }
+}
 
 @media (max-width: 240px) {
   #appName {
