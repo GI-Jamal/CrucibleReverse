@@ -8,9 +8,20 @@ const tooltipList = [...tooltipTriggerList].map(
 function getValues() {
   let userInput = document.getElementById("message").value;
 
-  let reversedInput = reverseString(userInput);
+  userInput = userInput.trim();
 
-  displayString(reversedInput);
+  if (userInput.length < 1) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops!",
+      text: "Text must be greater than 1 character long, and must not be only whitespace",
+      heightAuto: false,
+    });
+  } else {
+    let reversedInput = reverseString(userInput);
+
+    displayString(reversedInput);
+  }
 }
 
 function reverseString(message) {

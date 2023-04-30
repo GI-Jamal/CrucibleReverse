@@ -123,9 +123,20 @@
 function getValues() {
   let userInput = document.getElementById("message").value;
 
-  let reversedInput = reverseString(userInput);
+  userInput = userInput.trim();
 
-  displayString(reversedInput);
+  if (userInput.length < 1) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops!",
+      text: "Text must be greater than 1 character long, and must not be only whitespace",
+      heightAuto: false,
+    });
+  } else {
+    let reversedInput = reverseString(userInput);
+
+    displayString(reversedInput);
+  }
 }
 
 function reverseString(message) {
@@ -151,16 +162,20 @@ function displayString(reversedMessage) {
           <h5>getValues():</h5>
           <p>
             This function retrieves a string input from an HTML element with the
-            ID "message," reverses the order of the characters in the string
-            using the reverseString() function, and then displays the reversed
-            string in another HTML element with the ID "msg" using the
-            displayString() function.
+            ID "message", trims any leading and trailing white space, and then
+            checks the sanitzed string to ensure it it is at least 1 character
+            long. If the string is not at least 1 character long then an alert
+            is sent to the user to input a valid string. Otherwise the function
+            reverses the order of the characters in the string using the
+            reverseString() function, and then displays the reversed string in
+            another HTML element with the ID "msg" using the displayString()
+            function.
           </p>
           <hr />
           <h5>reverseString():</h5>
           <p>
             The reverseString() function takes a string parameter and returns a
-            string with the characters reversed by iterating through the string
+            string with the characters in reverse. It does this by iterating through the string
             in reverse and concatenating each character together to form the
             reversed string.
           </p>
